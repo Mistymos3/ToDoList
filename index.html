@@ -5,12 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Do List</title>
+    <link rel = "stylesheet" href = "css/style.css" />
 </head>
 <body>
     <h1 id = "myHeader">To Do List</h1>
 
     <!-- step 1 and 2 -->
-
+    <input type = "button" id = "addButton" value = "Add" onclick = "addTask();" />
+    <input type = "text" id = "input" placeholder = "enter task ..." />
+    
     <hr>
 
     <ul id = "tasks">
@@ -25,8 +28,16 @@
     <hr>
 
     <!-- steps 8 and 9 -->
+    <div id = "divAbout">
+
+    </div>
+
+    <input type = "button" value = "About" onclick = "doAbout()" />
 
     <!-- step 13 -->
-    
+    <!-- add button to clear about button info -->
+    <input type = "button" value = "Clear" onclick = "clearAbout()" />
+
+    <script src = "js/index.js"></script>
 </body>
 </html>
