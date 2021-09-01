@@ -8,7 +8,8 @@ function addTask () {
         var item = document.createElement("li");
         //add HTML for buttons and new task text
         //Note, need to use "because of" in HTML
-        item.innerHTML = '<input type = "button" class = "done" onclick = "markDone(this.parentNode)" value = "&#x2713;"/>' + '<input type = "button" class = "remove" onclick = "remove(this.parentNode)" value = "&#x2715;" />' + newTask;
+        item.innerHTML = '<input type = "button" class = "done" onclick = "markDone(this.parentNode)" value = "&#x2713;"/>' + '<input type = "button" class = "remove" onclick = "remove(this.parentNode)" value = "&#x2715;" />' +'<input type = "button" class = "important" value = "!" onclick = "important(this.parentNode)" />'
+        + newTask;
 
         //add new item as part of existing list
         document.getElementById("tasks").appendChild(item);
@@ -48,4 +49,9 @@ function clearAbout() {
     var clear = document.getElementById("divAbout");
 
     clear.innerHTML = "";
+}
+
+// important button function that HIGHLIGHTS ITEM FROM DOCUMENT
+function important(item) {
+    item.className = "important"
 }
